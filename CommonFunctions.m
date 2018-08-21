@@ -341,6 +341,7 @@ NSMutableArray * generateForbiddenPathsArray(BOOL isRecursive){
 	[forbiddenPaths addObject:@"IMAP.framework"];
 	[forbiddenPaths addObject:@"POP.framework"];
 	[forbiddenPaths addObject:@"Parsec"];
+    [forbiddenPaths addObject:@"SpringBoardUI"];
 	[forbiddenPaths addObject:@"ZoomTouch"];
 	[forbiddenPaths addObject:@"VisualVoicemailUsage"];
 	if (isRecursive){
@@ -356,7 +357,7 @@ NSMutableArray * generateForbiddenPathsArray(BOOL isRecursive){
 
 
 int locationOfString(const char *haystack, const char *needle){
-	char * found = strstr( haystack, needle );
+	char *found = strstr( haystack, needle );
 	int anIndex=-1;
 	if (found != NULL){
 	  anIndex = found - haystack;
